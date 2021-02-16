@@ -1,12 +1,10 @@
-FROM ubuntu:bionic
+FROM ubuntu:20.04
 
 WORKDIR /
 
 RUN apt-get update
-
-RUN apt-get install -y git
-
-RUN apt-get install -y \
+RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
+    git \
     build-essential \
     autoconf \
     automake \
@@ -23,7 +21,7 @@ RUN apt-get install -y \
     libaio-dev \
     libattr1-dev \
     libelf-dev \
-    linux-headers-$(uname -r) \
+    linux-headers-5.4.0-65-generic \
     python3 \
     python3-dev \
     python3-setuptools \
@@ -34,7 +32,7 @@ RUN git clone https://github.com/zfsonlinux/zfs.git
 
 WORKDIR /zfs
 
-RUN git checkout zfs-0.8.3
+RUN git checkout zfs-2.0.3
 
 RUN sh autogen.sh
 RUN ./configure

@@ -1,0 +1,10 @@
+version: '3'
+services:
+  fedora:
+    build:
+      dockerfile: docker/fedora/33/Dockerfile
+      context: .
+  ubuntu:
+    build:
+      dockerfile: docker/ubuntu/bionic/Dockerfile
+      context: .

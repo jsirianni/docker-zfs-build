@@ -1,0 +1,8 @@
+language: generic
+services:
+  - docker
+before_script:
+  - docker pull fedora:33
+  - docker pull ubuntu:20.04
+script:
+  - make build
