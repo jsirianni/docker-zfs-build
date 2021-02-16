@@ -32,5 +32,6 @@ WORKDIR /zfs
 RUN git checkout zfs-2.0.3
 
 RUN sh autogen.sh
-RUN ./configure
-RUN make -s -j$(nproc)
+RUN ./configure --with-config=srpm
+RUN make -j1 pkg-utils rpm-dkms
+RUN dnf localinstall *.$(uname -p).rpm *.noarch.rpm --skip-broken -y
