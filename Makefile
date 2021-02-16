@@ -1,5 +1,5 @@
 .PHONY: build
-build: build-fedora build-ubuntu
+build: build-ubuntu
 
 .PHONY: build-all
 build-all:
