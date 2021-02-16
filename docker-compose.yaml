@@ -6,5 +6,5 @@ services:
       context: .
   ubuntu:
     build:
-      dockerfile: docker/ubuntu/bionic/Dockerfile
+      dockerfile: docker/ubuntu/focal/Dockerfile
       context: .
