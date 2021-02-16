@@ -21,7 +21,7 @@ RUN DEBIAN_FRONTEND=noninteractive apt-get install -y \
     libaio-dev \
     libattr1-dev \
     libelf-dev \
-    linux-headers-5.4.0-65-generic \
+    linux-headers-$(uname -r) \
     python3 \
     python3-dev \
     python3-setuptools \
