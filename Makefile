@@ -25,7 +25,7 @@ build-ubuntu: build-zfs-2.0.3-ubuntu-20.04-linux-5.10.15
 ### END UBUNTU
 
 .PHONY: build
-build: build-ubuntu
+build: build-fedora
 
 .PHONY: build-all
 build-all:
